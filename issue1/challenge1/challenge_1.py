@@ -18,8 +18,6 @@ def get_imdb_link():
 def get_infobox_data():
     title = table.find_all('th', class_='plainlist')
     description = table.find_all('td', class_='plainlist')
-    headers = []
-    info = []
     title_ru = table.find('th', class_='infobox-above').get_text(' ')
     title_en = table.find('td', class_='').get_text(' ')
     my_dict = {'Оригинальное название': title_en, 'В российском релизе': title_ru}
